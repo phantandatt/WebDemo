@@ -8,13 +8,26 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class HomeController {
     @GetMapping("/home")
-    public ModelAndView getHomePage(){
-        ModelAndView modelAndView = new ModelAndView("index");
-        return modelAndView;
+    public ModelAndView getHomePage() {
+        ModelAndView andView = new ModelAndView("index");
+        return andView;
     }
-    @GetMapping("/fashion")
-    public ModelAndView getFashionPage(){
-        ModelAndView modelAndView = new ModelAndView("fashion");
-        return modelAndView;
+
+    @GetMapping("/product")
+    public ModelAndView getProductPage() {
+        ModelAndView andView = new ModelAndView("product");
+
+        return andView;
+    }
+
+    @GetMapping("/product-detail")
+    public ModelAndView getProductDetailPage() {
+        ModelAndView andView = new ModelAndView("product-detail");
+        return andView;
+    }
+@GetMapping("/cart")
+    public ModelAndView gettPage() {
+        ModelAndView andView = new ModelAndView("shoping-cart");
+        return andView;
     }
 }
